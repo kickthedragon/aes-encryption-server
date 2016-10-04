@@ -1,0 +1,31 @@
+[package]
+name = "aes-encryption-server"
+version = "0.1.0"
+authors = ["Eric Remigino <eric.remigino@gmail.com>"]
+
+
+[dependencies]
+toml = "^0.2"
+mioco = "^0.8"
+rust-crypto = "^0.2"
+rand = "^0.3"
+chrono = "^0.2"
+byteorder = "^0.5"
+
+[profile.dev]
+opt-level = 0
+debug = true
+rpath = false
+lto = false
+debug-assertions = true
+codegen-units = 1
+panic = 'unwind'
+
+# The release profile, used for `cargo build --release`.
+[profile.release]
+opt-level = 3
+debug = false
+rpath = false
+lto = true
+debug-assertions = false
+panic = 'unwind'

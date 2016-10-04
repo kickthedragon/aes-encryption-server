@@ -1,0 +1,6 @@
+socket_address = "0.0.0.0:33384"
+logs_folder = "logs"
+keys_folder = "keys"
+server_log = "server-{}.log"
+security_log = "security-{}.log"
+aes_key_file = "aes.key"
